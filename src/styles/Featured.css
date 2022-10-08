@@ -1,0 +1,122 @@
+.featured {
+  width: 100%;
+  padding: 8rem 0;
+  background-color: var(--background);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+}
+
+.featured .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.featured .leftColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.featured .leftColumn h2 {
+  font-size: 2rem;
+}
+
+.featured .leftColumn p {
+  margin: 1.5rem 0;
+}
+
+.featured .leftColumn .btn {
+  align-self: flex-start;
+}
+
+.featured .rightColumn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.featured .rightColumn .coin--card {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 22px;
+  margin: 0.4rem;
+  width: 170px;
+  height: 170px;
+  border-radius: 24px;
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  box-shadow: rgb(0 0 0 / 12%) 0px 8px 24px;
+  text-align: center;
+}
+
+.featured .rightColumn .coin--card:hover {
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 24px;
+}
+
+.featured .rightColumn .coin--card .coin--img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+
+.featured .rightColumn .coin--card .coin--img img {
+  width: 50px;
+  max-height: auto;
+}
+
+.featured .rightColumn .coin--card .price-change-icon {
+  font-size: 29px;
+  margin: auto;
+  padding-top: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured .rightColumn .coin--card span {
+  font-size: 18px;
+}
+
+.coin--price {
+  margin: 0.25rem 0;
+}
+
+.pcc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: var(--primary);
+}
+
+@media screen and (max-width: 870px) {
+  .featured .container {
+    grid-template-columns: 1fr;
+  }
+
+  .featured .leftColumn {
+    text-align: center;
+  }
+
+  .featured .leftColumn .btn {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .featured .container .rightColumn .coin--card {
+    width: 100%;
+    height: fit-content;
+    padding: 22px;
+  }
+}
